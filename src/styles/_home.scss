@@ -1,0 +1,86 @@
+.hero {
+  background-image: url('/public/imgs/bg-home1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 800px;
+
+  &-title {
+    font-size: 46px;
+    font-family: 'GT Sectra Fine';
+    text-align: center;
+    font-weight: 400;
+    color: $color-white;
+    margin: 0 0 32px 0;
+    padding-top: 200px;
+  }
+
+  &-subtitle {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    color: $color-white;
+    padding-bottom: 32px;
+    position: relative;
+    margin-bottom: 0;
+    
+    &:after {
+      content: ' ';
+      position: absolute;
+      width: 100px;
+      height: 4px;
+      bottom: 0px;
+      left: calc(50% - 50px);
+      background-color: $color-primary;
+    }
+  }
+
+  &-filters {
+    margin: auto;
+    margin-top: 32px;
+    width: 1024px;
+    @include flex-between;
+
+    .filters {
+      flex: 1;
+      background-color: $color-white;
+      border-radius: 6px;
+      box-shadow: $shadow;
+      display: flex;
+    }
+
+    .search {
+      width: 78px;
+      border-radius: 6px;
+      margin-left: 12px;
+      background-color: $color-primary;
+      box-shadow: $shadow;
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      outline: 0;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    .filter-wrapper {
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid #ebebeb ;
+      padding: 16px;
+      position: relative;
+
+      &:last-child {
+        border-right: none;
+      }
+
+      transition: width 0.35s;
+    }
+  }
+}
